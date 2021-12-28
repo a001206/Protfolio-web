@@ -1,3 +1,26 @@
+/* Global */
+:root{
+    /* Color */
+
+
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+}
+*{
+    /* Universal  tag*/
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
 body{
     font-family: 'Open Sans', sans-serif;
 }
