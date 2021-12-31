@@ -9,13 +9,42 @@
     --font-regular: 18px;
     --font-small: 16px;
     --font-micro: 14px;
+
+    /* Font wdight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
 }
 *{
     /* Universal  tag*/
     box-sizing: border-box;
 }
 
-
+/*Typography*/
+h1{
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: black;
+    margin: 16px 0;
+}
+h2{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    color: black;
+    margin: 8px 0;
+}
+h3{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: black;
+    margin: 8px 0;
+}
+p{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: black;
+    margin: 4px 0;
+}
 
 
 
