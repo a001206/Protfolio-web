@@ -31,6 +31,12 @@ body{
 ul{
     list-style: none;
 }
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
 /*Typography*/
 h1{
     font-size: var(--font-large);
@@ -56,10 +62,17 @@ p{
     color: black;
     margin: 4px 0;
 }
+
+
+
+/* Profile */
+#Profile{
+
+}
 .Header{
     display: flex;
     justify-content: space-between;
-    background-color: pink;
+    background-color: #fdd84a;
     color: white;
     align-items: center;
 }
@@ -75,7 +88,7 @@ p{
     border-radius: var(--size-border-radius);
 }
 .Nav_menu_item:hover{
-    background-color: palevioletred;
+    background-color: #FFBD35;
 }
 .Nav_menu_item.active{
     boreder: 1px solid white;
@@ -83,4 +96,35 @@ p{
 
 .Logo{
     font-size:var(--font-medium);
+}
+
+.ImgAndtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: url('imgs/background.png') center/cover;
+    color: white;
+}
+.ImgAndtitle h1{
+    color: white;
+}
+.ImgAndtitle img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    padding-top: 16px;
+    border-radius: 50%;
+}
+.ImgAndtitle button{
+    margin: 16px 0px;
+    color: white;
+    border: 2px solid white;
+}
+
+/* About me */
+#AboutMe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
