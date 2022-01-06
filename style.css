@@ -17,6 +17,9 @@
 
     /* Size */
     --size-border-radius:4px;
+
+    /*Animation */
+    --animation-duration: 300ms;
 }
 
 *{
@@ -72,7 +75,7 @@ p{
 .Header{
     display: flex;
     justify-content: space-between;
-    background-color: #fdd84a;
+    background-color: #ffde59;
     color: white;
     align-items: center;
 }
@@ -113,8 +116,8 @@ p{
     width: 100px;
     height: 100px;
     border: 1px solid white;
-    padding-top: 16px;
     border-radius: 50%;
+    margin-top: 16px;
 }
 .ImgAndtitle button{
     margin: 16px 0px;
@@ -122,9 +125,46 @@ p{
     border: 2px solid white;
 }
 
+.section{
+    text-align: center;
+    padding: 50px;
+}
 /* About me */
 #AboutMe{
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+.tec{
+    margin-top: 58px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Front_end, .Mobile, .Back_end{
+    margin: 80px 0;
+}
+.Major_icon{
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 60px;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    border-radius: 50%;
+}
+.Major_icon i{
+    transition: var(--animation-duration);
+}
+.Major_icon i:hover{
+    color: darksalmon;
+    transform: scale(1.2);
+}
+.Language{
+    color: darkgray;
+}
+
+/* Skills */
+
+#Skill{
+    background-color: #A0CC64;
 }
