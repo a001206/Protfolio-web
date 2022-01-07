@@ -172,3 +172,33 @@ p{
 #Skills{
     background-color: #A0CC64;
 }
+.Skillset{
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+}
+.Skillset_left{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+}
+.SKill_proficiency{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Skillset_right{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+}
+.Skillset_right .Tools{
+    background-color:darkkhaki;
+    flex-basis: 60%;
+}
+.Skillset_right .Etc{
+    height: 100%;
+    flex-basis: 40%;
+}
