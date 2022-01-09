@@ -172,6 +172,9 @@ p{
 #Skills{
     background-color: #A0CC64;
 }
+#Skills p{
+    margin-bottom: 16px;
+}
 .Skills{
     height: 100%;
     padding: 0 16px;
