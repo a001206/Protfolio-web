@@ -220,3 +220,78 @@ p{
     height: 3px;
     background-color: orange;
 }
+
+/* Work */
+.Projects_btns{
+    margin: 12px 0;
+}
+.Projects_btn{
+    border: 1px solid darkgrey;
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+    margin: 5px 0;
+}
+.Projects_btn.active, 
+.Projects_btn:hover{
+    background-color: #FFD700;
+}
+.Projects_count{
+    border: 1px solid darkgrey;
+    background-color: #A0CC64;
+    border-radius: 50%;
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    left: 6px;
+    opacity: 0;
+    transition: all var(--animation-duration) ease-in;
+}
+.Projects_btn.active .Projects_count,
+.Projects_btn:hover .Projects_count{
+    opacity: 1;
+    top: 0;
+}
+.Projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.Project{
+    background-color: #fffafa;
+    position: relative;
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+}
+
+.Project img{
+    width: 100%;
+    height: 100%;
+}
+.Project_description{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(7px);
+}
+.Project:hover .Project_description{
+    opacity: 0.8;
+    transition: all var(--animation-duration) ease-in;
+    transform: translateY(0px);
+}
+.Project_description h3{
+    color: white;
+}
