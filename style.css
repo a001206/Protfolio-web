@@ -295,3 +295,39 @@ p{
 .Project_description h3{
     color: white;
 }
+
+/* Testimosial */
+
+#Testimonials{
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+}
+#Testimonials h3{
+    margin:30px 0;
+}
+.Testimonials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Testimonials img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.Testimonials p{
+    background-color: white;
+}
+.Testimonials :nth-child(odd){
+    margin-right: 30px;
+}
+.Testimonials :nth-child(even){
+    margin-left: 30px;
+}
+.Testimonials a{
+    color: gray;
+    text-decoration: none;
+}
+
+/* Etc */
