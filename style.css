@@ -50,7 +50,7 @@ h1{
     margin: 16px 0;
 }
 h2{
-    font-size: var(--font-regular);
+    font-size: var(--font-medium);
     font-weight: var(--weight-bold);
     color: black;
     margin: 8px 0;
@@ -330,4 +330,15 @@ p{
     text-decoration: none;
 }
 
-/* Etc */
+/* Contact */
+#Contact{
+    background-color: #ffde59;
+}
+.Git a{
+    font-size: 45px;
+    color: black;
+}
+.Git i:hover{
+    transition: all var(--animation-duration) ease-in;
+    transform: scale(1.1);
+}
