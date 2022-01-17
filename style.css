@@ -67,7 +67,10 @@ p{
     color: black;
     margin: 4px 0;
 }
-
+.section_container{
+    max-width: 1200px;
+    margin: auto;
+}
 
 
 /* Profile */
