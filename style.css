@@ -74,16 +74,28 @@ p{
 
 
 /* Profile */
-#Profile{
-
-}
-.Header{
+#Header{
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: #ffde59;
+    background-color: transparent;
     color: white;
     align-items: center;
+    transition: all var(--animation-duration);
 }
+#Header.navbar_dark{
+    background-color: #FFBD35;
+}
+.Header_toggle_btn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    color: white;
+    display: none;
+}
+
 .Nav_menu{
     display: flex;
     flex-direction: row;
@@ -95,18 +107,24 @@ p{
     cursor: pointer;
     border-radius: var(--size-border-radius);
 }
-.Nav_menu_item:hover{
+#Header.navbar_dark .Nav_menu_item:hover {
+    background-color: yellow;
+}
+
+.Nav_menu_item:hover {
     background-color: #FFBD35;
 }
 .Nav_menu_item.active{
-    boreder: 1px solid white;
+    border: 1px solid white;
 }
 
 .Logo{
     font-size:var(--font-medium);
+    min-width: 155px;
 }
 
 .ImgAndtitle{
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -273,6 +291,7 @@ p{
 }
 
 .Project img{
+    z-index: 10;
     width: 100%;
     height: 100%;
 }
@@ -349,4 +368,33 @@ p{
 }
 #Contact h1, #Contact h2, #Contact i, #Contact p{
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .Header{
+        flex-direction: column;
+        min-height: 60px;
+    }
+    .Nav_menu{
+        padding-left: 0px;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    .Nav_menu_item{
+        width: 100%;
+    }
+    .logo{
+        height: 100%;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .Header_toggle_btn{
+        display: block;
+        position: fixed;
+    }
+    .Header_toggle_btn:hover #Profile .Nav_menu{
+        display:block;
+    }
 }

@@ -17,17 +17,18 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <script src="https://kit.fontawesome.com/d8dad7fe46.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 
 <body>
     <!-- Profile -->
     <section id="Profile">
-        <header class="Header">
+        <header id="Header">
             <span class="Logo">
                 <i class="fas fa-cat"></i>
                 Haesung
             </span>
-            <span class="Nav_menu">
+            <span>
                 <ul class="Nav_menu">
                     <li class="Nav_menu_item active">Home</li>
                     <li class="Nav_menu_item">About</li>
@@ -38,6 +39,11 @@
                 </ul>
             </span>
         </header>
+        <div class="Header_toggle_btn">
+            <button class="Header_toggle_btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
         <div class="ImgAndtitle">
             <img src="imgs/비밀의나.jpeg">
             <h1 class="Title1">
