@@ -21,6 +21,18 @@ navbar_menu.addEventListener('click', (event) =>{
         return;
     }
 
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: 'smooth'});
+    scrollIntoView(link);
 });
+
+//conatct me 버튼을 클릭하면 Contact 페이지로 scroll.
+const button = document.querySelector('.Contact_me');
+
+// const Contact_me_section = document.querySelector('#Contact'); //()안에 # 을 쓰면 안 된다.
+button.addEventListener('click', () => {
+    scrollIntoView('#Contact');
+})
+
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+}
