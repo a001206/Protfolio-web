@@ -23,7 +23,6 @@
     --animation-duration: 300ms;
 }
 
-
 *{
     /* Universal  tag*/
     box-sizing: border-box;
@@ -71,6 +70,9 @@ p{
     max-width: 1200px;
     margin: auto;
 }
+a{
+    text-decoration: none;
+}
 
 
 /* Profile */
@@ -83,9 +85,10 @@ p{
     color: white;
     align-items: center;
     transition: all var(--animation-duration);
+    z-index: 1;
 }
 #Header.navbar_dark{
-    background-color: #FFBD35;
+    background-color: #ffde59;
 }
 .Header_toggle_btn{
     position: absolute;
@@ -100,12 +103,16 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 8px 0;
 }
 .Nav_menu_item{
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
     border-radius: var(--size-border-radius);
+}
+.Nav_menu_item a{
+    color:white;
 }
 #Header.navbar_dark .Nav_menu_item:hover {
     background-color: yellow;
@@ -150,7 +157,7 @@ p{
 
 .section{
     text-align: center;
-    padding: 50px;
+    padding: 130px 50px;
 }
 /* About me */
 #AboutMe{
@@ -371,9 +378,9 @@ p{
 }
 
 @media screen and (max-width: 768px) {
-    .Header{
-        flex-direction: column;
-        min-height: 60px;
+    #Header{
+        flex-direction: row;
+        min-height: 55.5px;
     }
     .Nav_menu{
         padding-left: 0px;
@@ -384,7 +391,7 @@ p{
     .Nav_menu_item{
         width: 100%;
     }
-    .logo{
+    #Header .logo{
         height: 100%;
         width: 100%;
         align-items: flex-start;

@@ -1,15 +1,26 @@
 'use strict'
 
-//navbar 올라가면 투명 내령면 색.
+//scroll 내리면 Nav_menu 배경색 바꾸기.
 const navbar = document.querySelector('#Header');
 const navbarHight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-    console.log(`navbarHeight: ${navbarHight}`);
     if(navbarHight < window.scrollY){
         navbar.classList.add('navbar_dark');
     }else {
         navbar.classList.remove('navbar_dark');
     }
+});
+
+//Nav_meun를 클릭하면 해당하는 section으로 스크롤 이동.
+const navbar_menu = document.querySelector('.Nav_menu');
+navbar_menu.addEventListener('click', (event) =>{
+    const target = event.target;
+    const link = target.dataset.link;
+    if(link == null){
+        return;
+    }
+
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
 });
