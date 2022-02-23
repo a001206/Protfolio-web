@@ -76,6 +76,15 @@ a{
 
 
 /* Profile */
+.Arrow_up_btn{
+    position: fixed;
+    color: black;
+    bottom: 80px;
+    right: 60px;
+    font-size: 30px;
+    opacity: 0;
+    z-index: 1;
+}
 #Profile{
     background: url('imgs/background.png') center/cover;
 }

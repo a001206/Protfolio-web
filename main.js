@@ -40,6 +40,15 @@ document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY/homeHeight;
 });
 
+//arrow up button.
+const arrow_up_btn =document.querySelector('.Arrow_up_btn'); 
+document.addEventListener('scroll', () => {
+    arrow_up_btn.style.opacity = 0 + window.scrollY/homeHeight;
+});
+arrow_up_btn.addEventListener('click', () => {
+    scrollIntoView('#Profile');
+});
+
 
 
 
