@@ -42,13 +42,24 @@ document.addEventListener('scroll', () => {
 
 //arrow up button.
 const arrow_up_btn =document.querySelector('.Arrow_up_btn'); 
+// document.addEventListener('scroll', () => {
+//     arrow_up_btn.style.opacity = 0 + window.scrollY/homeHeight;
+// });
+// arrow_up_btn.addEventListener('click', () => {
+//     scrollIntoView('#Profile');
+// });
+
 document.addEventListener('scroll', () => {
-    arrow_up_btn.style.opacity = 0 + window.scrollY/homeHeight;
+    if(homeHeight<window.scrollY){
+        arrow_up_btn.classList.add('visible');
+    }else {
+        arrow_up_btn.classList.remove('visible');
+    }
 });
+
 arrow_up_btn.addEventListener('click', () => {
     scrollIntoView('#Profile');
 });
-
 
 
 
