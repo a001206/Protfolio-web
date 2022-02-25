@@ -62,6 +62,43 @@ arrow_up_btn.addEventListener('click', () => {
 });
 
 
+//work
+const Projects =document.querySelector('.Projects'); //전체 프로젝트
+const Project_btns = document.querySelector('.Projects_btns') //버튼 뭉치
+const Project_btn =document.querySelector('.Projects_btn'); //각각의 버튼들
+const Project = document.querySelectorAll('.Project');//각각의 프로젝트들이 들어 있는 배열
+
+
+Project_btns.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null){
+        return;
+    }
+    console.log(filter);
+
+
+
+    for(let i = 0; i<Project.length;i++){
+        console.log(Project[i]);
+        i++;
+    }
+});
+
+
+
+// Projct_btns.addEventListener('click', (e) => {
+//     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+//     if(filter == null){
+//         return;
+//     }
+//     console.log(filter);
+
+//     Project.forEach(function (project) {
+//             console.log(project.dataset.type);
+//         });
+// });
+
+
 
 
 

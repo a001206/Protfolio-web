@@ -269,6 +269,9 @@ a{
 .Projects_btn:hover{
     background-color: #FFD700;
 }
+.active{
+    background-color: #FFD700;
+}
 .Projects_count{
     border: 1px solid darkgrey;
     background-color: #A0CC64;
