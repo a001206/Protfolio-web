@@ -23,6 +23,13 @@ navbar_menu.addEventListener('click', (event) =>{
 
     scrollIntoView(link);
 });
+//navbar active 넣기
+const nav_menu_item = document.getElementsByClassName('Nav_menu_item')
+
+
+document.addEventListener('click', (item) =>{
+
+})
 
 //conatct me 버튼을 클릭하면 Contact 페이지로 scroll.
 const button = document.querySelector('.Contact_me');
@@ -74,6 +81,12 @@ Project_btns.addEventListener('click', (e) => {
         return;
     }
     
+    const active = document.querySelector('.Projects_btn.selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target:e.target.parentNode;
+
+    active.classList.remove('selected');
+    target.classList.add('selected');
+
     Projects.classList.add('anim_out');
     
 

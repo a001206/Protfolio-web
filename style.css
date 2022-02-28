@@ -114,20 +114,20 @@ a{
     margin: 0 4px;
     cursor: pointer;
     border-radius: var(--size-border-radius);
+    border: 1px solid transparent;
 }
 .Nav_menu_item a{
     color:white;
 }
 #Header.navbar_dark .Nav_menu_item:hover {
-    background-color: yellow;
+    background-color: #FFBD35;
 }
 
 .Nav_menu_item:hover {
     background-color: #FFBD35;
-}
-.Nav_menu_item.active{
     border: 1px solid white;
 }
+
 
 .Logo{
     font-size:var(--font-medium);
@@ -265,11 +265,11 @@ a{
     padding: 8px 48px;
     margin: 5px 0;
 }
-.Projects_btn.active, 
+.Projects_btn.selected, 
 .Projects_btn:hover{
     background-color: #FFD700;
 }
-.active{
+.selected{
     background-color: #FFD700;
 }
 .Projects_count{
@@ -286,7 +286,7 @@ a{
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
 }
-.Projects_btn.active .Projects_count,
+.Projects_btn.selected .Projects_count,
 .Projects_btn:hover .Projects_count{
     opacity: 1;
     top: 0;
