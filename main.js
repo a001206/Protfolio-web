@@ -22,6 +22,7 @@ navbar_menu.addEventListener('click', (event) =>{
     }
 
     scrollIntoView(link);
+    navbar_menu.classList.remove('open');
 });
 //navbar active 넣기
 const nav_menu_item = document.getElementsByClassName('Nav_menu_item')
@@ -37,7 +38,7 @@ const button = document.querySelector('.Contact_me');
 // const Contact_me_section = document.querySelector('#Contact'); //()안에 # 을 쓰면 안 된다.
 button.addEventListener('click', () => {
     scrollIntoView('#Contact');
-})
+});
 
 
 //scroll정도에 따른 home의 투명도 조절.
@@ -80,7 +81,18 @@ Project_btns.addEventListener('click', (e) => {
     if(filter == null){
         return;
     }
-    
+
+    Project.forEach((project)=>{
+        if(filter === '*' || filter === project.dataset.type){
+            project.classList.remove('invisible');
+        }else{
+            project.classList.add('invisible');
+        }
+
+    });
+
+
+
     const active = document.querySelector('.Projects_btn.selected');
     const target = e.target.nodeName === 'BUTTON' ? e.target:e.target.parentNode;
 
@@ -104,18 +116,27 @@ Project_btns.addEventListener('click', (e) => {
 
 
 
-// Projct_btns.addEventListener('click', (e) => {
-//     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-//     if(filter == null){
-//         return;
-//     }
-//     console.log(filter);
+Project_btns.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null){
+        return;
+    }
+    console.log(filter);
 
-//     Project.forEach(function (project) {
-//             console.log(project.dataset.type);
-//         });
-// });
+    Project.forEach(function (project) {
+            console.log(project.dataset.type);
+        });
+});
 
+//toggle btn 클릭하면 Navbar 밑으로 펼쳐지기.
+//클릭하면 냇바가 내려와야함 그러면 플랙스 컬럼이 돼야하고 그러려면 클래스를 추가해줘야함
+//.Nav_menu에 display none을 block 로 바꿔야함 nav_menu height: 291px
+const toggle_btn = document.querySelector('.Header_toggle_btn');
+
+
+toggle_btn.addEventListener('click', () => {
+    navbar_menu.classList.toggle('open');
+});
 
 
 
